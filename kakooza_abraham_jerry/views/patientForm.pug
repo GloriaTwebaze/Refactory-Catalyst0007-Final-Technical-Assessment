@@ -1,0 +1,86 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css")
+        link(rel="stylesheet", href="https://fonts.google.com/sr?family=Courier+New+OS&token=MT")
+        link(rel='stylesheet', href='/css/style.css')
+        title= title
+    
+    body
+        div.container
+            div.card(style="border:true;")
+                header.card-header 
+                    div.text-center.justify-content-center
+                        img.justify-content-center(src="/images/form-header-image.png", alt="", srcset="")
+                    p.text-center.card-title Ministry of Health
+                    h4.text-center.card-title COVID-19(CORONAVIRUS)
+                    p.text-center.card-title Virus Test Registration Form
+                div 
+                    form(method="POST" action='/createpatient' id="patientform")
+                        div.card-body
+                            div.form-field.form-row 
+                                div.col
+                                    span(style='display:inline-block')
+                                        label(for='surname' style='display:block') Surname
+                                        input.form-control.formsinput#surname(type='text' name='surname')
+                                        small 
+                                div.col
+                                    span(style='display:inline-block')
+                                        label(for='givenname' style='display:block') Givenname
+                                        input.form-control.formsinput#givenname(type='text' name='givenname')
+                                        small
+                            div.form-field.form-row 
+                                div.col
+                                    span(style='display:inline-block')
+                                        label(for='dob' style='display:block') Date of Birth
+                                        input.form-control.formsinput#dob(type='date' name='dob')
+                                        small 
+                                div.col
+                                    span(style='display:inline-block')
+                                        label(for='residence' style='display:block') Place of residence
+                                        input.form-control.formsinput#residence(type='text' name='residence')
+                                        small
+                            div.form-field.form-row
+                                div.col
+                                    span(style='display:inline-block')
+                                        label(for='occupation' style='display:block') Occupation
+                                        input.form-control.formsinput#occupation(type='text' name='occupation')
+                                        small 
+                                div.col
+                                    span(style='display:inline-block')
+                                        label(for='nation' style='display:block') Nationality
+                                        input.form-control.formsinput#nation(type='text' name='nation')
+                                        small
+                                
+                
+                            div.form-field.form-row
+                                span(style='display:inline-block')
+                                label(for='gender' style='display:block') Gender
+                                br
+                                span 
+                                    label Male
+                                    input.form-control.formsinput#gender(type='radio' name='gender'  value="male")
+                                    label Female
+                                    input.form-control.formsinput#gender(type='radio' name='gender'  value="female")
+                                small
+                                    
+                            div.form-field.form-row
+                                label(for='category') Category
+                                select.form-control.formsinput(name="category" id = "category")
+                                    option(value="resumee")  Resumee
+                                    option(value="contact") Contact
+                                    option(value="alert") Alert 
+                                    option(value="volunteer") Volunteer
+                                small
+                                br
+                            div.form-row
+                                div.col
+                                    button.btn.btn-primary.btn-block(type="submit") Register
+                                
+    
+        script(src="/js/validation.js")
+    footer.row.justify-content-center.forma
+        div.container
+            block footer
+                div.col-md-12 © Kakooza Jerry Refactory Catalyst Assesment

@@ -1,0 +1,38 @@
+* {
+    font-family: sans-serif;
+}
+
+h3 {
+    text-align: center;
+}
+
+.covid {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+#formdesign {
+    margin-top: 50px;
+    margin-left: -10px;
+}
+
+.xrow {
+    width: 500px;
+    min-height: 500px;
+    border-color: 2px solid black;
+    border-radius: 8px;
+    /* margin-right: 90px; */
+    padding: 20px;
+}
+
+.button {
+    float: right;
+    width: 80px;
+    height: 25px;
+    text-align: center;
+}
+
+.error {
+    font-size: 15px;
+    color: red;
+}

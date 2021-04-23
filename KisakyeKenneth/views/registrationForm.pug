@@ -1,0 +1,66 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Ministry Of Health
+  link(rel='stylesheet' href='/css/stylesheet.css')
+  link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm' crossorigin='anonymous')
+#form_header
+  img(src='/images/form-header-image.png')
+#header_info
+  p#ministry  Ministry of Health
+  h2#covid COVID-19 (CORONA VIRUS)
+  p#virus  Virus - Test Registration Form 
+  
+#reg_form
+  form(action='/' method='POST' name='patientRegistration' onSubmit='patient_validation();')
+    .form-row
+      .form-group.col-md-6
+        label(for='inputEmail4') Surname
+        input#inputEmail4.form-control(type='text' name='surname')
+        label#surname_error
+      .form-group.col-md-6
+        label(for='inputPassword4') Given name
+        input#inputPassword4.form-control(type='text' name='given_name')
+        label#givenName_error
+    .form-row
+      .form-group.col-md-6
+        label(for='inputEmail4') Date of Birth
+        input#inputEmail4.form-control(type='date' name='dob')
+      .form-group.col-md-6
+        label(for='inputPassword4') Place of residence
+        input#inputPassword4.form-control(type='text' name='residence')
+    .form-row
+      .form-group.col-md-6
+        label(for='inputEmail4') Occupation
+        input#inputEmail4.form-control(type='text' name='occupation')
+      .form-group.col-md-6
+        label(for='inputPassword4') Nationality
+        input#inputPassword4.form-control(type='text' name='nationality')
+    .form-row
+      .form-group.col-md-12(style='border-bottom: 1px solid #ced4da;')
+        label(for='inputEmail4') Gender
+      .form-group.col-md-6.form-check.form-check-inline
+        input#inlineRadio1.form-check-input(type='radio' name='gender' value='Male' checked)
+        label.form-check-label(for='inlineRadio1') Male
+      .form-check.form-check-inline
+        input#inlineRadio2.form-check-input(type='radio' name='gender' value='Female')
+        label.form-check-label(for='inlineRadio2') Female
+    .form-group
+      label(for='inputState') Category
+      select#inputState.form-control(name='category')
+        option(value='default') -- Select Category --
+        option(value='Returnee') Returnee
+        option(value='Contact') Contact 
+        option(value='Alert') Alert 
+        option(value='Volunter') Volunter
+    button.btn.btn-primary(type='submit')  Register
+    
+   
+script 
+    include ../public/js/registrationValidator.js
+//- script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js' integrity='sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN' crossorigin='anonymous')
+//- script(src='../js/registrationValidator.js') 
+//- script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl' crossorigin='anonymous')
+

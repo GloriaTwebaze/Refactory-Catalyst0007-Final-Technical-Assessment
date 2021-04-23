@@ -1,0 +1,89 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/css/bootstrap.min.css' integrity='sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6' crossorigin='anonymous')
+    link(rel='stylesheet' href='/css/virusForm.css')
+    title Covid Patient Registration Form
+  body
+    .container#formdesign
+      form(name='covid_form' method="POST" action='/' )
+        .row.xrow
+          img(src="/images/form-header-image.png")
+          .col-md-12
+          .col.col-md-12
+            h3 Ministry of Health
+            h3.covid Covid-19 (Corona Virus)
+            h3 Ministry of Health
+            
+          .col-md-6
+            label Surname
+            input.form-control(name='surname' type='text')
+            span#surerr.error
+          .col-md-6
+            label Given Name
+            input.form-control(name='first_name' type='text')
+            span#fnamerr.error
+          .col-md-6
+            label Date of Birth
+            input.form-control(name='dob' type='date')
+            span#daterr.error
+          .col-md-6
+            label Place of Residence
+            input.form-control(name='residence' type='text')
+            span#reserr.error
+          .col-md-6
+            label Occupation
+            input.form-control(name='occupation' type='text')
+            span#occErr.error
+          .col-md-6
+            label Nationality
+            input.form-control(name='nationality' type='text')
+            span#naterr.error
+        
+          label Gender
+            hr
+            .row
+              .col-md-6
+                label Male
+                input(type='radio' name='gender' value='male')
+              .col-md-6
+                label(for='female') Female
+                input(type='radio' name='gender' value='female')
+              span#generr.error
+              
+          .col-md-12
+            select(name='category' id='') Patient Category
+              | 
+              option(selected='') -Patient Category--
+              option(value='1') One
+              option(value='2') Two
+              br
+            span#caterr.error
+          button.btn-success(type='submit') Register
+        // The employee list
+      .container-fluid
+        .col-md-6(style='width: 820px;margin-left:510px;margin-top:-580px;')
+          .col-sm-6(style='margin-top:20px;margin-bottom: 15px;')
+            form.d-flex
+              input.form-control.me-2(type='search' placeholder='Search' aria-label='Search')
+              button.btn.btn-outline-primary(type='submit') Search
+          table.table.table-striped.table-hover
+            tr.table-dark(style='font-weight: bold;')
+              td Surname
+              td Given Name
+              td Date of Birth
+              td Residence
+              td Occupation
+              td Nationality
+              td Gender
+              td Patient Category
+            tbody
+              td
+              td
+              td
+              td
+              td
+    script(src='/js/validate.js')

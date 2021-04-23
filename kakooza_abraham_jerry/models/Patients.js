@@ -3,19 +3,23 @@ const mongoose = require('mongoose');
 
 //create a schema for the data you need to save
 const patientSchema = new mongoose.Schema({ 
-    firstname: {
+    surname: {
         type: String,
         required: 'Please Enter first name'
     },
-    lastname: {
+    givenname: {
         type: String,
-        required: 'Please Enter last name'
+        required: 'Please Enter given name'
     },
-    email: {
+    dob: {
         type: String,
-        required: 'Please Enter Email'
-    }
-
+        required: 'Please Enter DOB'
+    },
+    occupation:String,
+    residence:String,
+    nation:String,
+    gender:String,
+    category:String
 })
 
 //export the mongoose model

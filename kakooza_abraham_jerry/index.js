@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
-const patients = require('./routes/patients');
+const patients = require('./routes/patientFormRoute');
 
 // Instantiations
 const app = express();

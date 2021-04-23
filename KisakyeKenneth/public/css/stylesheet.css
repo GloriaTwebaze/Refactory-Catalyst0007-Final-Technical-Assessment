@@ -1,0 +1,25 @@
+#reg_form{
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+#form_header {
+    margin: 0 auto;
+    width: 780px;
+}
+#header_info{
+    width: 500px;
+    margin: 0 auto;
+}
+#ministry{
+    margin-left: 140px;
+    font-size: 20px;
+}
+#covid{
+    margin-top: -20px;
+}
+#virus{
+    margin-top: -5px;
+    margin-left: 70px;
+    font-size: 20px;
+}

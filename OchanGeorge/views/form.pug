@@ -1,0 +1,65 @@
+doctype html
+html
+    head
+        title=title
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width,initial-scale=1.0")
+
+        // css for all pages.
+        link(rel='stylesheet' href='/css/form.css')
+    body
+        
+        header
+            img(src='/images/form-header-image.png' alt='form-header-image')
+            h3 Ministry of Health
+        main
+            h2 COVID-19 (CORONA VIRUS)
+            h3 Virus-Test Registration Form
+            form(action='/form' method='post')
+                div.group1
+                    div.sur
+                        label.surName(for='surName') Surname
+                        input#surName(type='text' name='surName')
+                    div.given
+                        label.givenName(for='givenName') Given Name
+                        input#givenName(type='text' name='givenName')
+
+                    div.dob
+                        label.dateOfBirth(for='dateOfBirth') Date of Birth
+                        input#dateOfBirth(type='date' name='dateOfBirth')
+
+                    div.por
+                        label.placeOfResidence(for='placeOfResidence') Place of residence
+                        input#placeOfResidence(type='text' name='placeOfResidence')
+
+                    div.ocup
+                        label.occupation(for='occupation') Occupation
+                        input#occupation(type='text' name='occupation')
+                
+                    div.nat
+                        label.nationality(for='nationality') Nationality
+                        input#nationality(type='' name='nationality')
+
+                
+                h4.genderH Gender
+                div.genderG
+                    input#genderMale(type='radio' name='gender' value='Male' checked)
+                    
+                    label.genderMale(for='gender') Male
+
+                    input#genderFemale(type='radio' name='gender' value='Female')
+                    
+                    label.genderFemale(for='gender') Female
+
+                div
+                    label.category(for='category') Category
+                    select#category(name='category')
+                        option(value='') --Select Category
+                        option(value='Returnee') Returnee
+                        option(value='Contact') Contact
+                        option(value='Alert') Alert
+                        option(value='Volunteer') Volunteer
+
+                button#register(type='submit') Register
+            

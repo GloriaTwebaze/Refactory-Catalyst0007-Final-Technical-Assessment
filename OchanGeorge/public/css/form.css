@@ -1,0 +1,121 @@
+/* Resting the some the page settings. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+  border: 1px solid grey;
+  margin: 5%;
+  padding: 0 5% 5% 5%;
+}
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+header h3 {
+  text-align: center;
+  font-weight: 500;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+main h2 {
+  text-align: center;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
+main > h3 {
+  text-align: center;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+}
+
+.genderG {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.genderG label {
+  margin-left: 20px;
+}
+
+.genderH {
+  font-weight: 500;
+  margin-top: 20px;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+input[type='radio'] {
+  height: 50px;
+}
+
+input,
+select {
+  height: 35px;
+}
+
+label {
+  margin-top: 20px;
+}
+
+div.group1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  column-gap: 20px;
+}
+
+.sur {
+  grid-area: 1/1/2/2;
+}
+.given {
+  grid-area: 1/2/2/-1;
+}
+.dob {
+  grid-area: 2/1/3/2;
+}
+
+.por {
+  grid-area: 2/2/3/-1;
+}
+
+.ocup {
+  grid-area: 3/1/4/2;
+}
+
+.nat {
+  grid-area: 3/2/4/-1;
+}
+
+#register {
+  margin-top: 30px;
+  width: 50%;
+  margin-left: auto;
+  height: 35px;
+  background-color: blue;
+  color: white;
+  font-size: 1.2rem;
+}

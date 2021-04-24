@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+<header>
+    <div>
+        <img src="images/form-header-image.png" class="mx-auto d-block"id="image2">
+    </div>
+    <h2>Ministry Of Health</h2> 
+    <h1>COVID-19 (CORONA VIRUS)</h1> 
+    <h2>Virus - Test Registration Form</h2>
+</header>
+<div class= "container">
+    <form>
+        <div class="col-md-6">
+          <label for="inputSurname" class="form-label">Surname</label>
+          <input type="surname" class="form-control" id="inputSurname">
+     
+          <div class="row md-6">
+          <label for="inputGivenname" class="form-label">Given Name</label>
+          <input type="givenname" class="form-control" id="inputGivenname">
+        </div>
+
+        <div class="col-md-6">
+            <label for="inputDateofbirth" class="form-label">Date Of Birth</label>
+            <input type="number" class="form-control" id="inputDateofbirth"placeholder="YY/MM/DD">
+          </div>
+
+          <div class="row md-6">
+            <label for="inputPlaceofresidence" class="form-label">Place Of Residence</label>
+            <input type="text" class="form-control" id="placeofresidence">
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputOccupation" class="form-label">Occupation</label>
+            <input type="occupation" class="form-control" id="inputOccupation">
+          </div>
+
+          <div class="col-md-6">
+            <label for="inputNationality" class="form-label">Nationality</label>
+            <input type="nationality" class="form-control" id="inputNationality">
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="male">
+            <label class="form-check-label" for="male">
+             Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="female" checked>
+            <label class="form-check-label" for="female">
+              Female
+            </label>
+          </div>
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Select Category
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+            </div>
+          </div>
+
+
+          <input type="submit" value="Register"/>
+        </div>
+</form>
+</div>
+</body>
+<script src="assessment.js"></script>
+</html>

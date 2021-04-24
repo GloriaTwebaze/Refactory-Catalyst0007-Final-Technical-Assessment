@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stay Clean</title>
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+<body>
+ 
+
+
+
+    
+  <form class="row g-3 orderform" method="POST" action="/router/regRoutes.js">
+    <img src="/public/system-images/form-header-image.png" alt="">
+    <h5>Ministry of Health</h5>
+    <h2>COVID-19 (CORONA VIRUS)</h2>
+    <h5>Virus-Test Registration</h5>
+    <div class="col-md-6">
+    <label for="name" class="form-label">Surname</label>
+    <input type="name" class="form-control" id="inputusername"  name="surname">
+  </div>
+  <div class="col-md-6">
+    <label for="name" class="form-label">Given Name</label>
+    <input type="name" class="form-control" id="inputusername" placeholder="user name" name="givenname">
+  </div>
+  <div class="col-md-6">
+    <label for="date" class="form-label">Date of Birth</label>
+    <input type="text" class="form-control" id="inputdate" placeholder="YY/MM/DD"name="date">
+  </div>
+  <div class="col-md-6">
+    <label for="residence" class="form-label">Place of Residence</label>
+    <input type="text" class="form-control" id="inputAddress"  name="residence">
+  </div>
+  <div class="col-md-6">
+    <label for="occupation" class="form-label">Occupation</label>
+    <input type="text" class="form-control" id="occupation"  name="occupation">
+  </div>
+   <div class="col-md-6">
+    <label for="nationality" class="form-label">Nationality</label>
+    <input type="text" class="form-control" id="nationality"  name="nationality">
+  </div>
+ 
+  <div class="col-md-12">
+    <label for="inputrequests" class="form-label">Category</label>
+    <select id="inputrequests" class="form-select" name="category">
+      <option selected>--Select Category...</option>
+      <option></option>
+      <option></option>
+      
+    </select>
+  </div>
+
+  
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary">Register</button>
+  </div>
+ 
+  
+</form>
+    
+ 
+
+
+
+<script src="/public/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" ></script>
+</body>
+</html>
+
+
+

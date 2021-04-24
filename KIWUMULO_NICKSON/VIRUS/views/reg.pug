@@ -1,0 +1,60 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css')
+  script(src='/js/reg.js')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+  title Virus Test Reg Form
+head
+  title
+.container
+  img(src='./images/reg.png' alt=''  width='500px' )
+  h1 Virus Test Registration Form
+  form#form(method='POST'  action='/reg'  onSubmit='return validate()'  )
+    .form-row
+      .col
+        label(for='example') Surname
+        input#username.form-control(type='text' name='surname')
+        #nameErr.error
+      .col
+        label(for='example') Given name
+        input#ha.form-control(type='text' name='givenname' )
+        #haErr.error
+    .form-row
+      .col
+        label(for='example')  Date  of Birth
+        input#date.form-control(type='date' name='dateofbirth' )
+        #dateErr.error
+      .col
+        label(for='example') Place of Residence
+        input#place.form-control(type='text' name='placeofresidence' )
+        #placeErr.error
+    .form-row
+      .col
+        label(for='example') Occupation
+        input#occ.form-control(type='text' name='occupation' )
+        #occErr.error
+      .col
+        label(for='example') Nationality
+        input#nat.form-control(type='text' name='nationality' )
+        #natErr.error
+    .form-row
+      .col
+        label(for='example') Gender
+        select#gen.form-control(name='gender' )
+          option(value='Default') Choose your gender
+          option(value='Male') Male
+          option(value='Female') Female
+        #genErr.error
+    .form-group
+        label(for='example') Category
+        select#cat.form-control(name='category')
+          option(value='Default') Select category
+          option(value='N/A') N/A
+          option(value='A') A
+        #catErr.error
+    button.btn.btn-primary(type='submit') Register
+script(src='/js/corona.js')

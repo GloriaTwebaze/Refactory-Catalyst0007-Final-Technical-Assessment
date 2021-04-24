@@ -1,0 +1,55 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Stay Clean
+  link(rel='stylesheet' href='/css/bootstrap.min.css')
+  link(rel='stylesheet' href='/css/style.css')
+form.row.g-3.regform(method='POST' action='/' name="form" onSubmit='return validation();')
+  img(src='/system-images/form-header-image.png' alt='logo')
+  h5 Ministry of Health
+  h2 COVID-19 (CORONA VIRUS)
+  h5 Virus-Test Registration
+  .col-md-6
+    label.form-label(for='name') Surname
+    input#inputusername.form-control(type='name' name='surname')
+  .col-md-6
+    label.form-label(for='name') Given Name
+    input#inputusername.form-control(type='name'  name='givenname')
+  .col-md-6
+    label.form-label(for='date') Date of Birth
+    input#inputdate.form-control(type='text' placeholder='YY/MM/DD' name='date')
+  .col-md-6
+    label.form-label(for='residence') Place of Residence
+    input#inputAddress.form-control(type='text' name='residence')
+  .col-md-6
+    label.form-label(for='occupation') Occupation
+    input#occupation.form-control(type='text' name='occupation')
+  .col-md-6
+    label.form-label(for='nationality') Nationality
+    input#nationality.form-control(type='text' name='nationality')
+  .col-md-12
+                label Gender
+                div
+                    
+                    label.form-check.form-check-inline 
+                        span.form-check-label Male    &nbsp
+                        input.form-check-input(type="radio" id="male" checked name="gender" value="male")                    
+                    label.form-check.form-check-inline 
+                        span.form-check-label Female &nbsp
+                    input.form-check-input(type="radio" id="female" checked name="gender" value="female")    
+  .col-md-12
+    label.form-label(for='inputrequests') Category
+    select#inputrequests.form-select(name='category')
+      option(selected='') --Select Category...
+      option(value='Returnee') Returnee
+      option(value='Contact') Contact
+      option(value='Alert') Alert
+      option(value='Volunteer') Volunteer     
+  .col-6
+    button.btn.btn-primary(type='submit') Register
+script(src='/js/reg.js')      
+script(src='/js/bootstrap.min.js')
+script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js')

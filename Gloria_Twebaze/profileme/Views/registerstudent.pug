@@ -1,0 +1,84 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+        link(rel="stylesheet", href= "/style.css")
+       
+    body 
+
+        style.
+           
+        div.row.justify-content-center
+            div.col-md-7
+        div.conatiner
+            header.card-header
+                h4.card-title.primary Student Details Entry Form
+
+            form.form(action='/student' method='post' name="registerstudent" onsubmit = "return register()" )
+                div.form-row
+                    div.col.form-group
+                        label Sur Name
+                        input.form-control(placeholder="Enter your Sur Name here" name="surname")
+                        small#sname.innerstyle
+
+                    div.col.form-group 
+                        label Given Name   
+                        input.form-control(placeholder="Enter your Given Name here" name="givenname")  
+                        small#lname.innerstyle
+
+                div.col.form-group
+                            label Gender
+                            div 
+                            label.form-check.form-check-inline
+                                input.form-check-input(type="radio" name="gender" value="female")
+                                span.form-check-label Female 
+                            label.form-check.form-check-inline
+                                input.form-check-input(type="radio" name="gender" value="male")
+                                span.form-check-label Male
+                                small#sex.innerstyle
+                
+                div.form-row
+                    div.form-row
+                        div.col-md-2.form-group(placeholder="01/01/1970")
+                            label Date of Birth
+                            input.form-control( type="date" name="date")
+                            small#dob.innerstyle
+
+                div.form-row
+                div.col-md-3.form-group
+                    label  Country  
+                    select.form-control(name="city")
+                        option(value="default") (.....Select country.....)
+                        option(value="Uganda") Uganda
+                        option(value="Kenya") Kenya 
+                        option(value="Tanzania") Tanzania
+                        option(value="Burundi") Burundi
+                        option(value="Rwanda") Rwanda
+                div.form-row
+                    div.col.form-group
+                        label Place of Residence 
+                        textarea.form-control(placeholder="Enter your Current place of residence" name="address")
+                    div.col.form-group
+                        label Phone Number
+                        input.form-control(type="tel" name="phone_num" placeholder="Eg. 07xxxxxxx or +256xxxxxxx")
+                        small#contact.innerstyle
+            
+                div.form-row Email
+                    input.form-control(type="text" placeholder="E.g. applicant@gmail.com" name="email")
+                            
+                div.form-row
+                    div.col.form-group
+                        label Skills (seperate skills with commas)
+                        textarea.form-control( name="skill")  
+                    div.col.form-group
+                        label Projects (seperate projects with commas)
+                        textarea.form-control( name="project") 
+
+                .form-row 
+                    .col.form-inline 
+                        button(type='submit', value='submit') Submit
+                        button(type='submit', value='submit') Cancel
+    
+                      
+        script(src="/validation/validate.js") 
+                    
